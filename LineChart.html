@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<canvas id='myChart'></canvas>
+  <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September', 'October', 'November', 'December'],
+        datasets: [{
+          data: [86, 71, 13, 45, 10, 63, 72, 38, 29, 13, 47, 84],
+          label: 'Clothes',
+          borderColor: 'rgba(120, 120, 255, 1)'
+        },
+          {
+            data: [100, 21, 113, 15, 70, 24, 94, 62, 52, 42, 69, 83],
+            label: 'Candy',
+            borderColor: 'rgba(255, 100, 255, 1)'
+          }, {
+          data: [0, 21, 35, 12, 120, 49, 75, 67, 45, 79, 7, 89],
+            label: 'Amazon',
+            borderColor: 'rgba(100, 200, 100, 1)'
+        },{
+            data: [80, 107, 63, 78, 52, 102, 114, 61, 84, 58, 97, 120],
+                label: 'Movies',
+                borderColor: 'rgba(250,30,30, 1)'
+            }]
+      },
+      options:{
+        plugins:{
+          title:{
+            display: true,
+            text: 'Monthly Spending'
+          },
+          legend: {
+            position: 'left'
+          }
+        }
+      }
+    });
+  </script>
+<canvas id='chart2'></canvas>
+    <script>
+    var cty = document.getElementById('chart2');
+    var nextChart = new Chart(cty, {
+        type: 'scatter',
+        data: {
+            datasets:[{
+                label: 'Dataset1',
+                backgroundColor: 'rgba(255, 200, 50, 1)',
+                pointBackgroundColor: 'rgba(255, 200, 50, 1)',
+                pointRadius: 4,
+                data: [
+                    {x: 7, y: 10},
+                    {x: 11, y: 25},
+                    {x: 15, y: 15},
+                    {x: 2, y: 5},
+                    {x: 5, y: 8}
+                ]
+            }, {
+                label: 'Dataset2',
+                backgroundColor: 'rgba(50, 200, 50, 1)',
+                pointBackgroundColor: 'rgba(50, 200, 50, 1)',
+                pointRadius: 4,
+                data: [
+                    {x: 1, y: 10},
+                    {x: 7, y: 13},
+                    {x: 15, y: 16},
+                    {x: 4, y: 12},
+                    {x: 11, y: 18}
+                ]
+            }, {
+                label: 'Dataset3',
+                backgroundColor: 'rgba(238, 14, 14, 1)',
+                pointBackgroundColor: 'rgba(238, 14, 14, 1)',
+                pointRadius: 4,
+                data: [
+                    {x: 2, y: 7},
+                    {x: 6, y: 12},
+                    {x: 9, y: 15},
+                    {x: 12, y: 9},
+                    {x: 13, y: 13},
+                    {x: 15, y: 19},
+                    {x: 17, y: 25},
+                    {x: 7, y: 10},
+                    {x: 10, y: 13},
+                    {x: 4, y: 9}
+                ]
+            }, {
+                label: 'Dataset4',
+                backgroundColor: 'rgba(0, 4, 255, 1)',
+                pointBackgroundColor: 'rgba(0, 4, 255, 1)',
+                pointRadius: 4,
+                data: [
+                    {x: 1, y: 7},
+                    {x: 5, y: 16},
+                    {x: 6, y: 15},
+                    {x: 9, y: 9},
+                    {x: 2, y: 13},
+                    {x: 12, y: 19},
+                    {x: 13, y: 25},
+                    {x: 15, y: 10},
+                    {x: 17, y: 13},
+                    {x: 7, y: 9}
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                xAxis: {
+                    beginAtZero: true
+                },
+                yAxis: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display:true,
+                    text: 'Sales'
+                }
+            }
+        }
+    });
+    </script>
+</body>
+</html>
