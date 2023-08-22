@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style='width: 300px'>
+  <canvas id='myChart'></canvas>
+</div>
+<div style='width: 300px'>
+  <canvas id='myChart2'></canvas>
+</div>
+<div style='width: 300px'>
+    <canvas id='myChart3'></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Orange', 'Purple', 'Pink'],
+      datasets: [{
+        label: 'Favorite Colors',
+        data: [12, 15, 8, 9, 10, 7, 6],
+        backgroundColor:[
+                'rgb(255,99,99)',
+                'rgb(50, 150, 240)',
+                'rgb(255, 200, 80)',
+                'rgb(99,255,125)',
+                'rgb(255,163,0)',
+                'rgb(135,34,239)',
+                'rgb(246,110,211)'
+        ],
+        hoverOffset: 1
+      }]
+    },
+      options: {
+          plugins: {
+              title: {
+                  display: true,
+                  text: 'Favorite Color'
+              }
+          }
+      }
+  });
+</script>
+<script>
+  var cty = document.getElementById('myChart2');
+  var myChart = new Chart(cty, {
+    type: 'pie',
+    data: {
+      labels: ['Mario', 'Luigi', 'Toad', 'Yoshi', 'Peach', 'Rosalina'],
+      datasets: [{
+        label: 'Mario Characters',
+        data: [4, 5, 8, 7, 6, 8],
+        backgroundColor:[
+          'rgb(255,0,0)',
+          'rgb(2,148,25)',
+          'rgb(245,105,105)',
+            'rgb(0,255,30)',
+            'rgb(248,108,255)',
+            'rgb(46,207,255)'
+        ],
+        hoverOffset: 1
+      }]
+    },
+      options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Mario Character'
+            }
+        }
+      }
+  });
+</script>
+<script>
+    var ctz = document.getElementById('myChart3');
+    var myChart = new Chart(ctz, {
+        type: 'polarArea',
+        data: {
+            labels: ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Champion', 'Grand Champion', 'SSL'],
+            datasets: [{
+                label: 'Rocket League ranks',
+                data: [1, 4, 5, 10, 8, 5, 2, 1],
+                backgroundColor: [
+                    'rgb(246,169,80)',
+                    'rgb(143,157,149)',
+                    'rgb(255,250,24)',
+                    'rgb(80,252,252)',
+                    'rgb(8,137,243)',
+                    'rgb(142,50,240)',
+                    'rgb(240,50,66)',
+                    'rgb(0,0,0)'
+                ]
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Rocket League Ranks'
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
